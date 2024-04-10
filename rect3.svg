@@ -1,0 +1,9 @@
+<svg>
+    <clipPath id="myPath" clipPathUnits="objectBoundingBox">
+        <path d="M16 0
+        H 208
+        L 193 25
+        H 0
+        L 16 0 sZ" />
+    </clipPath>
+</svg>

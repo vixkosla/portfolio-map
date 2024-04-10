@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+}
+
+iframe:first-child {
+    border: 0px;
+    /* clip-path: circle(50%); */
+}
+
+iframe {
+    /* padding-top: 20px; */
+    /* position: relative; */
+    z-index: 1;
+    display: absolute;
+    margin: 0;
+    box-shadow: none;
+    /* padding: 0; */
+    border: 0;
+    /* overflow: hidden; */
+    transition: opacity 1000ms ease-in;
+}
+
+iframe:not(.active) {
+    opacity: 0.275;
+}
+
+@media only screen and (max-width: 480px) {
+    .control-button {
+        /* clip-path: polygon(10% 10%,90% 10%,90% 90%,10% 90%); */
+        clip-path: none ;
+    }
+}
+
+.control-button {
+    /* clip-path: (60%); */
+    /* clip-path: url(rect3.svg#myPath); */
+    /* clip-path: ("M16 0H208L193 25H0L16 0Z"); */
+    clip-path: polygon(4% 0%,100% 0%,95% 101%,0% 100%);
+
+    padding-left: 20px;
+
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.25px;
+
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    border: 0px;
+    /* opacity: 0.4; */
+    text-transform: uppercase;
+    /* background-color: #75da59; */
+    color:white;
+    height: 30px;
+    text-align: left;
+    opacity: 0.7;
+    transition: opacity 250ms ease-in, clip-path 250ms ease-in;
+    /* transition: clip-path 250ms ease-in; */
+
+
+}
+
+.control-button:hover {
+    opacity: 1;
+    clip-path: polygon(0% 0%,100% 0%,100% 101%,0% 100%);
+}
+
+.control-button:has( + iframe.active)  {
+    background-image: url('./ctrlk.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    clip-path: polygon(0% 0%,100% 0%,100% 101%,0% 100%);
+}
+
+.control-button:has( + iframe#wineRegion) {
+    background-color: #e33d8d;
+}
+
+.control-button:has( + iframe#routeMap) {
+    background-color: #b4997d;
+}
+
+.control-button:has( + iframe#explosion) {
+    background-color: #e0d77d;
+}
+
+.control-button:has( + iframe#heatmap) {
+    background-color: #4fd17c;
+}
+
+.control-button:has( + iframe#clusters) {
+    background-color: #59d6da;
+}
