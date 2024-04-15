@@ -38,10 +38,21 @@ let controlButtonAll = document.querySelectorAll('.control-button')
 // })
 
 let pointA = 400
-let pointB = 35
+let pointB = 25
+
+let loader = document.querySelector('.loading-screen')
+
+window.addEventListener('load', e => {
+  loader.classList.add('loaded')
+  console.log('congratulations')
+})
 
 frames.forEach(frame => {
+
+  // frame.loading = 'lazy'
+
   frame.addEventListener('load', e => {
+
     frame.parentNode.addEventListener('pointerdown', () => {
       // console.log('frame click')
       console.log(frame.id)

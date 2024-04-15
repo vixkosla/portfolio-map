@@ -1,0 +1,22 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200">
+	<rect fill="#e33d8d" stroke="#e33d8d" stroke-width="15" width="30" height="190" x="25" y="85">
+		<animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4">
+		</animate>
+	</rect>
+	<rect fill="#b4997d" stroke="#b4997d" stroke-width="15" width="30" height="190" x="85" y="85">
+		<animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2">
+		</animate>
+	</rect>
+	<rect fill="#e0d77d" stroke="#e0d77d" stroke-width="15" width="30" height="190" x="145" y="85">
+		<animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0">
+		</animate>
+	</rect>
+	<rect fill="#4fd17c" stroke="#4fd17c" stroke-width="15" width="30" height="190" x="205" y="85">
+		<animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0.2">
+		</animate>
+	</rect>
+	<rect fill="#59d6da" stroke="#59d6da" stroke-width="15" width="30" height="190" x="265" y="85">
+		<animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0.4">
+		</animate>
+	</rect>
+</svg>

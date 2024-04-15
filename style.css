@@ -2,6 +2,14 @@ body {
     margin: 0;
 }
 
+.container {
+    background-color: aliceblue;
+}
+
+.frame {
+    padding-bottom: 5px;
+}
+
 iframe:first-child {
     border: 0px;
     /* clip-path: circle(50%); */
@@ -21,14 +29,7 @@ iframe {
 }
 
 iframe:not(.active) {
-    opacity: 0.275;
-}
-
-@media only screen and (max-width: 480px) {
-    .control-button {
-        /* clip-path: polygon(10% 10%,90% 10%,90% 90%,10% 90%); */
-        clip-path: none ;
-    }
+    opacity: 0.075;
 }
 
 .control-button {
@@ -59,6 +60,17 @@ iframe:not(.active) {
 
 
 }
+
+@media (min-width: 480px) {
+    .control-button {
+        clip-path: polygon(0% 0%,100% 0%,100% 101%,0% 100%);
+        /* clip-path: none ; */
+        /* color: black; */
+    }
+}
+
+
+
 
 .control-button:hover {
     opacity: 1;
@@ -91,4 +103,68 @@ iframe:not(.active) {
 
 .control-button:has( + iframe#clusters) {
     background-color: #59d6da;
+}
+
+
+
+.loading-screen {
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s, visibility 1s;
+}
+
+.loading-screen.loaded {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.loading-screen_loader {
+    background-image: url('./loading.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10vh;
+    /* transform: rotate(90deg); */
+    /* transform: scaleX(2) rotate(90deg); */
+
+}
+
+.text-container {
+    /* color: black; */
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.25px;
+    color: aliceblue;
+    padding-left: 1vw;
+    font-size: 24px;
+    animation: blinc 1s ease-in-out infinite;
+}
+
+@keyframes blinc {
+    from {
+        color: aliceblue;
+        background-color: white;
+    }
+
+    to {
+        color: white;
+        background-color: aliceblue;
+    }
+}
+
+.text-container p {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.text-container span {
+    font-size: 18px;
 }
