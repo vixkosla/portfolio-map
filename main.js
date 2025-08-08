@@ -37,7 +37,9 @@ let controlButtonAll = document.querySelectorAll('.control-button')
 
 // })
 
-let pointA = 400
+let windowHeight = window.innerHeight - 25 * 4 - 100;
+
+let pointA = windowHeight;
 let pointB = 25
 
 let loader = document.querySelector('.loading-screen')
