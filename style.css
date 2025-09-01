@@ -18,8 +18,8 @@ iframe:first-child {
 iframe {
     /* padding-top: 20px; */
     /* position: relative; */
-    z-index: 1;
-    display: absolute;
+    /* z-index: 1; */
+    /* display: absolute; */
     margin: 0;
     box-shadow: none;
     /* transform: scale(0.95); */
@@ -49,7 +49,7 @@ iframe:not(.active) {
     letter-spacing: 0.25px;
 
     width: 100%;
-    position: absolute;
+    position: relative;
     z-index: 2;
     border: 0px;
     /* opacity: 0.4; */
